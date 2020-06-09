@@ -43,5 +43,4 @@ public class registro extends HttpServlet {
 		rd=request.getRequestDispatcher("/home.jsp");
 		rd.forward(request, response);
 	}
-
 }
