@@ -9,6 +9,8 @@
         function enviarFormulario() {
             var cui = document.getElementById("cui").value;
             var clave = document.getElementById("clave").value;
+            var clave = document.getElementById("clave").value;
+            var validacion=20185588;
             if(cui==""){
                 alert("campos vacios, comprueve que todos los datos esten llenos");
                 return false;
@@ -25,10 +27,20 @@
                 alert("numero de cui invalido");
                 return false;
             }
+            else if(isNaN(cui)){
+                alert("numero de cui invalido");
+                return false;
+            }
+            else if(validacion!=clave){
+                alert("ffsdfdsfdsf");
+                return false;
+            }
+            
             
         }
     </script>
 	<form class="from-register"  action="registro" method="post" nombre="formulario">
+	<br>Cui=20185588<br>
        
        <div>
             <label for="cui">Ingrese su CUI:</label><br>
