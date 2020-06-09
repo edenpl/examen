@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+        function enviarFormulario() {
+            var cui = document.getElementById("cui").value;
+            var clave = document.getElementById("clave").value;
+            if(cui==""){
+                alert("campos vacios, comprueve que todos los datos esten llenos");
+                return false;
+            }
+            else if(clave==""){
+                alert("campos vacios, comprueve que todos los datos esten llenos");
+                return false;
+            }
+            else if(cui.length<8){
+                alert("numero de cui invalido");
+                return false;
+            }
+            else if(isNaN(cui)){
+                alert("numero de cui invalido");
+                return false;
+            }
+            
+        }
+    </script>
+	<form class="from-register"  action="registro" method="post" nombre="formulario">
+       
+       <div>
+            <label for="cui">Ingrese su CUI:</label><br>
+            <input type="text" maxlength="8" name="cui" id ="cui"><br>
+        </div>
+        <div>
+            <label for="clave">Ingrese su Clave:</label><br>
+            <input type="password" maxlength="10" name="clave" id ="clave"><br><br>
+        </div>
+        <input type="submit" value="enviar" onclick=' return enviarFormulario()'>
+  </form>
+	
+</body>
+</html>
